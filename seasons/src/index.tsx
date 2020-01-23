@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 interface State {
     lat?:number,
@@ -30,9 +31,9 @@ class App extends React.Component<State> {
             lat: position.coords.latitude
         });
     }
-    
-    render() {
-        
+
+    renderContent() {
+
         if(this.state.lat && !this.state.errorMessage) {
             return <SeasonDisplay lat={this.state.lat} />
         }
@@ -41,7 +42,11 @@ class App extends React.Component<State> {
             return <p>Error: {this.state.errorMessage}</p>
         }
 
-        return <p>Loading!</p>
+        return <Spinner message="Please accept the location request" />
+    }
+    
+    render() {
+        return <div>{this.renderContent()}</div>
     }
 }
 
