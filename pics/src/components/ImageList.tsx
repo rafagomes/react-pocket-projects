@@ -15,11 +15,12 @@ interface Props {
 }
 
 const ImageList = (props:Props) => {
+
     const images = props.images.map((image) => {
         return <ImageCard image={image} key={image.id} />//<img key={id} src={urls.regular} alt={alt_description} />
     });
 
-return  <div className="image-list">{images}</div>
+    return  <div className="image-list">{images}</div>
 }
 
 export default ImageList;

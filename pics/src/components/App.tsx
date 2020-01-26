@@ -18,6 +18,7 @@ class App extends React.Component<Photos, State> {
     }
 
     onSearchSubmit = async (term:string) => {
+
         const result = await unsplash.get('/search/photos', {
             params: { query: term }
         });
@@ -28,6 +29,7 @@ class App extends React.Component<Photos, State> {
     }
 
     render() {
+        
         return (
             <div className="ui container" style={{marginTop: '10px'}} >
                 <SearchBar onSubmit={this.onSearchSubmit} />

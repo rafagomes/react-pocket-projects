@@ -9,6 +9,7 @@ interface State {
 }
 
 class ImageCard extends React.Component<Props, State> {
+    
     imageRef:any = React.createRef();
     state:State = { spans: 0 }
 
@@ -23,11 +24,13 @@ class ImageCard extends React.Component<Props, State> {
     }
 
     render() {
-        const {alt_description, urls} = this.props.image; 
+        const {alt_description, urls} = this.props.image;
 
         return (
             <div style={{ gridRowEnd: `span ${this.state.spans}`}}>
-                <img ref={this.imageRef} src={urls.regular} alt={alt_description} />
+                <a href={urls.full} target="_blank" rel="noopener noreferrer">
+                    <img ref={this.imageRef} src={urls.regular} alt={alt_description} />
+                </a>
             </div>
         );
     }
