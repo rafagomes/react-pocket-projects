@@ -7,10 +7,28 @@ interface State {
     selectedSong?: Song
 }
 
-class SongList extends React.Component {
+interface Props {
+    songs: Array<Song>
+}
+
+class SongList extends React.Component<Props> {
+
+    renderList() {
+        
+        return this.props.songs.map((song:Song) => {
+            return (
+                <div className="item" key={song.title}>
+                    <div className="right floated content">
+                        <button className="ui button primary">Select</button>
+                    </div>
+                    <div className="content">{song.title}</div>
+                </div>
+            );
+        });
+    }
+
     render() {
-        console.log(this.props);
-        return <div>SONG</div>
+        return <div className="ui divided list">{this.renderList()}</div>
     }
 }
 
