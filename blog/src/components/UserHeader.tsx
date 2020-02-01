@@ -1,10 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchUser} from '../actions';
 import { AppReducer } from '../reducers';
 
 interface Props  {
-    fetchUser: Function,
     userId: number,
     user?: any
 }
@@ -14,12 +12,6 @@ interface OwnProps {
 }
 
 class UserHeader extends React.Component<Props> {
-    
-    componentDidMount() {
-        const {userId, fetchUser} = this.props;
-
-        fetchUser(userId);
-    }
     
     render() {
         const {user} = this.props;
@@ -38,4 +30,4 @@ const mapStateToProps = (state: AppReducer, ownProps:OwnProps) => {
     return {user: state.users.find(user => user.id === ownProps.userId)};
 };
 
-export default connect(mapStateToProps, {fetchUser})(UserHeader);
+export default connect(mapStateToProps)(UserHeader);
