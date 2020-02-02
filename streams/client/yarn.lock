@@ -1423,6 +1423,14 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/redux-form@^8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@types/redux-form/-/redux-form-8.2.0.tgz#e177fb1b837c11ec4c9eb66b4f5e833cdb4bef3f"
+  integrity sha512-tC3DGzd7hvunwjcb+8VOuzaRq+/m56aw5zujHE8AsZs0ZjqIpJDrq95T40Wms7cAazfR+02hpQS/NzsNJICoJA==
+  dependencies:
+    "@types/react" "*"
+    redux "^3.6.0 || ^4.0.0"
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -8612,7 +8620,7 @@ redux-form@^8.2.6:
   optionalDependencies:
     immutable "3.8.2"
 
-redux@^4.0.0, redux@^4.0.5:
+"redux@^3.6.0 || ^4.0.0", redux@^4.0.0, redux@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.5.tgz#4db5de5816e17891de8a80c424232d06f051d93f"
   integrity sha512-VSz1uMAH24DM6MF72vcojpYPtrTUu3ByVWfPL1nPfVRb5mZVTve5GnNCUV53QM/BZ66xfWrm0CTWoM+Xlz8V1w==
