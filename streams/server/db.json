@@ -1,5 +1,16 @@
 {
-    "streams": [
-        
-    ]
+  "streams": [
+    {
+      "title": "teste working",
+      "description": "now we got it",
+      "googleId": "110745630388187524118",
+      "id": 6
+    },
+    {
+      "title": "Programatic navigation",
+      "description": "It's working nice",
+      "googleId": "110745630388187524118",
+      "id": 7
+    }
+  ]
 }
