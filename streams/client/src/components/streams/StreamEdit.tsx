@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Stream, getStream} from '../../actions';
+import {Stream, getStream, updateStream} from '../../actions';
+import StreamForm from '../streams/StreamForm';
 
 interface State {
     streams: Array<Stream>
@@ -8,7 +9,9 @@ interface State {
 
 interface Props {
     match: any,
-    getStream: Function
+    getStream: Function,
+    updateStream: Function,
+    stream: Stream
 }
 
 interface OwnProps {
@@ -17,13 +20,30 @@ interface OwnProps {
 
 class StreamEdit extends React.Component<Props> {
 
+    id = null;
+
     componentDidMount() {
-        this.props.getStream(this.props.match.params.id);
+        this.id = this.props.match.params.id;
+        this.props.getStream(this.id);
+    }
+
+    onSubmit = (formValues:any) => {
+        this.props.updateStream(this.id,formValues);
     }
 
     render() {
-        console.log(this.props);
-        return <div>StreamEdit</div>
+        if(!this.props.stream) {
+            return <div>Loading...</div>
+        }
+
+        const {title, description} = this.props.stream;
+
+        return (
+            <div>
+                <h3>Edit {title}</h3>
+                <StreamForm initialValues={{title, description}} onSubmit={this.onSubmit} />
+            </div>
+        );
     };
 };
 
@@ -31,4 +51,4 @@ const mapStateToProps = (state:State, ownProps:OwnProps) => {
     return {stream: state.streams[ownProps.match.params.id]}
 };
 
-export default connect(mapStateToProps, {getStream})(StreamEdit);
+export default connect(mapStateToProps, {getStream, updateStream})(StreamEdit);

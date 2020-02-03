@@ -58,9 +58,10 @@ export const createStream = (formValues:FormData) => async (dispatch:Dispatch, g
 };
 
 export const updateStream = (id:number, formValues:FormData) => async (dispatch:Dispatch) => {
-    const response = await streams.put(`/streams/${id}`, formValues);
+    const response = await streams.patch(`/streams/${id}`, formValues);
     
     dispatch({type: UPDATE_STREAM, payload: response.data});
+    history.push('/');
 };
 
 
