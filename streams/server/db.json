@@ -1,18 +1,6 @@
 {
   "streams": [
     {
-      "title": "teste working",
-      "description": "now we got its",
-      "googleId": "110745630388187524118",
-      "id": 6
-    },
-    {
-      "title": "Programatic navigation",
-      "description": "It's working nicer",
-      "googleId": "110745630388187524118",
-      "id": 7
-    },
-    {
       "title": "Component reuses",
       "description": "Testing thatz",
       "googleId": "110745630388187524118",
@@ -23,6 +11,12 @@
       "description": "With GoogleID working",
       "googleId": "110745630388187524118",
       "id": 9
+    },
+    {
+      "title": "It's working like a charm",
+      "description": "Incredible app",
+      "googleId": "110745630388187524118",
+      "id": 10
     }
   ]
 }
