@@ -22,6 +22,9 @@ First app using Redux, using data exchange between components, very intersting a
 ## Blog (TS)
 A more complex app using the React-redux with multiple apis calls. Very interesting for those who wanna take a look on how to create a simple, but with some tricks behind the leaves.
 
+## Streams (TS)
+A complete app with React Router, Redux, React Thunk and many other things. This is a very good app example to be your reference in future implementations. PS: I didn't do the video part because was not relevant for the learning.
+
 #
 So that's it guys and girls!
 
