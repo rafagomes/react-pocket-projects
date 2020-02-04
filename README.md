@@ -25,6 +25,9 @@ A more complex app using the React-redux with multiple apis calls. Very interest
 ## Streams (TS)
 A complete app with React Router, Redux, React Thunk and many other things. This is a very good app example to be your reference in future implementations. PS: I didn't do the video part because was not relevant for the learning.
 
+## Translate (TS)
+A good example on how to use Context from React 16.
+
 #
 So that's it guys and girls!
 
