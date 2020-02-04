@@ -26,7 +26,7 @@ A more complex app using the React-redux with multiple apis calls. Very interest
 A complete app with React Router, Redux, React Thunk and many other things. This is a very good app example to be your reference in future implementations. PS: I didn't do the video part because was not relevant for the learning.
 
 ## Translate (TS)
-A good example on how to use Contexts from React 16.
+A good example on how to use Contexts from React 16. If you are thinking about replace Redux for Contexts, in a less complex app, for instance, this is good example. Redux has a lot of features that Contexts hasn't so, think carefully about that change.
 
 #
 So that's it guys and girls!
