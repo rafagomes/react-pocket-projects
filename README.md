@@ -13,6 +13,9 @@ A basic project showing some components and the consume of `props`.
 ## Seasons (TS)
 A project that shows winter or summer depending on your location.
 
+## Seasons Hooks (TS)
+A Seasons project version, like above, using Hooks.
+
 ## Pics (TS)
 A grid of pics dinamically loaded by your search. A loved that app, you can put so much knowledge without complexity.
 
