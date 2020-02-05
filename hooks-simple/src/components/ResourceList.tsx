@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import useResources from './useResources';
 
 interface Props {
     resource: string
@@ -11,16 +11,7 @@ interface Resource {
 }
 
 const ResourceList = ({resource}:{resource:string}) => {
-    const [resources, setResources] = useState([]);
-
-    const fetchResource = async (resource:string) => {
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/${resource}`);
-        setResources(response.data);
-    }
-
-    useEffect(() => {
-        fetchResource(resource);
-    }, [resource]);
+    const resources = useResources(resource);
 
     return (
         <ul>
