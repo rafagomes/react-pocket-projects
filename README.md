@@ -28,6 +28,9 @@ A complete app with React Router, Redux, React Thunk and many other things. This
 ## Translate (TS)
 A good example on how to use Contexts from React 16. If you are thinking about replace Redux for Contexts, in a less complex app, for instance, this is good example. Redux has a lot of features that Contexts hasn't so, think carefully about that change.
 
+## Hooks-simples (TS)
+A very straight forward app to demonstrate the Hooks way to build apps.
+
 #
 So that's it guys and girls!
 
